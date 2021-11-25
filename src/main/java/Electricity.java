@@ -10,7 +10,7 @@ public class Electricity {
     public static void main(String[] args) {
 
 
-        System.out.println("Enter how many numbers you want to use to calculate the average");
+        System.out.println("Enter how many electricity values you want to use to calculate the average");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -22,19 +22,16 @@ public class Electricity {
 
         double[] arr = new double[count];
 
-        System.out.println("\nEnter numbers now\n");
+        System.out.println("\nEnter values now\n");
         for (double i = 0; i < number; i++) {
-            System.out.println("Enter number " + (i + 1) + ":");
+            System.out.println("Enter a value " + (i + 1) + ":");
             arr[(int) i] = scanner.nextDouble();
         }
 
         DoubleStream streamOfNumbers = Arrays.stream(arr);
         OptionalDouble averageOfNumbers = streamOfNumbers.distinct().average();
 
-        System.out.println("\nAverage of Numbers: " + averageOfNumbers);
-
-
-
+        System.out.println("\nAverage of values: " + averageOfNumbers);
 
 
     }
